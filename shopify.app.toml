@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "mc-order-panel"
+client_id = "bd1694191daa347429e8ac008d2eb71e"
+application_url = "https://supposed-run-dr-accept.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_orders,write_orders,read_metaobjects,write_metaobjects,read_metaobject_definitions,write_metaobject_definitions,read_themes,write_themes,read_files,write_files,read_script_tags,write_script_tags"
+
+[auth]
+redirect_urls = [
+  "https://supposed-run-dr-accept.trycloudflare.com/auth/callback",
+  "https://supposed-run-dr-accept.trycloudflare.com/auth/shopify/callback",
+  "https://supposed-run-dr-accept.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "mc-custom-apps.myshopify.com"
